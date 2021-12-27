@@ -266,7 +266,7 @@ a{
     text-align: center;
     line-height: 40px;
 }
-
+/*--transition--*/
 .sub-but{
     height: 50px;
     margin: 20px 20px;
@@ -274,9 +274,44 @@ a{
     border: none;
     background-color: royalblue;
     color: black;
-    transition: background 1s ease;/*transition is a timing chane to the button*/
+   -webkit-transition: all 3s ease;/*transition is a timing chane to the button ease,linear,ease-in,ease-out,ease-in-out */
+   transition: all 3s ease; 
+
 }
+/*--transform--*/
 .sub-but:hover{
     background: cadetblue;
+    padding: 20px 30px;
+    transform: rotate(50deg);/*translate(),rotate(),scaleX(),scaleY(),scale(),skewX(),skewY(),skew(),matrix()*/
+}
+/*--adding animation-- */
+#contact1{
+ /*   animation-name: example;/*@keyframes,animation-name, animation-duration,animation-delay,animation-iteration-count,animation-direction
+                              ,animation-timing-function,animation-fill-mode,animation*/
+ /*   animation-duration: 5s;/*how many second go to the animation*/
 
+ /*  animation-timing-function: linear;/*speed*/
+   /* animation-delay: -4s;*/
+ /*   animation-iteration-count: 3;/*how many counts to the animation*/
+ /*   animation-direction: reverse;/*direction of animation ex:alternate,normal*/
+ animation:example 4s linear 0s 2 alternate-reverse;
+}
+
+
+
+/*--creating Animation w/ keyframes--*/
+
+@keyframes example{
+    0%{
+        background: red;
+        transform: translate(0px,0px);
+    }
+    50%{
+        background: yellow;
+        transform: translate(10px,10px);
+    }
+    100%{
+        background:black;
+        transform: translate(20px,20px);
+    }
 }
